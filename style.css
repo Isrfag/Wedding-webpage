@@ -1,0 +1,558 @@
+@import url('https://fonts.cdnfonts.com/css/bellarina');
+@import url('https://fonts.cdnfonts.com/css/aftesto');
+@import url('https://fonts.cdnfonts.com/css/handwritingcr');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%; /*Combinado con min-height del body hace que los elementos ocupen toda la página*/
+}
+
+body{
+    font-family: 'HandwritingCR',"Aftesto",sans-serif;
+    min-height: 100%;
+    background: url(img/newbackground.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+.grid-container > *{
+    padding: 10px;
+}
+
+.grid-container{
+    display: grid;
+    gap:10px;
+    grid-template:
+        "header header" auto /*Si le pones un punto . la clomuna se queda vacía*/
+        "main sideimage" auto
+        "footer footer" auto /
+        900px 950px;
+}
+
+/*Cosas del header*/
+
+.menusin{
+    grid-area: header;
+    background-color: #ffd6bb;
+    
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    
+}
+
+.logo{
+    position: absolute;
+    padding: 5px 0px;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+    font-family: "Bellarina";
+    height: 40px;
+    margin-left: 200px;
+    font-weight: 1000;
+    
+}
+
+nav ul{
+    float: right;
+    margin-right:320px;
+    
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 15px 5px;
+    font-family: "Aftesto";
+}
+
+nav ul li a{
+    color: black;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a.active, li a:hover{
+    text-decoration: underline;
+    transition: .5s;
+
+}
+
+.checkbtn{
+    font-size: 40px;
+    color: white;
+    float: right;
+    line-height: 80px; /*Con esto lo centras*/
+    margin-right: 40px;
+    cursor: pointer;
+    display: none; /*Lo quitamos pq esto se ve solo en movil*/
+    
+}
+
+#check{
+    display: none;
+}
+
+
+/*Cosas del main*/
+
+
+.main{
+    grid-area: main;
+    text-align: center;
+    background-color:rgba(255,255,255,0.6);
+}
+
+.main h1{
+
+    font-family: "Bellarina";
+    font-size: 85px;
+    padding-top: 100px;
+    font-weight: 100;
+}
+
+.main h2{
+
+    font-size: 50px;
+    padding: 40px;
+    font-weight: normal;
+    
+}
+
+.main h3{
+
+    font-size: 30px;
+    padding: 30px;
+    font-weight: normal;
+    
+}
+
+.main h3 a{
+    color: black;
+    text-decoration: underline;
+}
+
+.main h3 a:hover{
+
+    cursor: pointer;
+    color: blue;
+}
+
+
+.main p{
+
+    padding: 40px;
+    font-size: 20px;
+}
+
+.main p a{
+    color: black;
+    text-decoration: underline;
+}
+
+.main p a:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+.texto p{
+    margin: 25px 0;
+    text-align: justify;
+    padding: 0;
+}
+
+.texto #casa{
+    text-align: center;
+    padding: 35px ;
+}
+
+.texto h4{
+    text-align: center;
+}
+
+.dondetext p{
+    margin: 25px 0;
+    text-align: justify;
+    padding: 0;
+}
+
+.dondetext p a{
+    color: black;
+    text-decoration: underline;
+}
+.dondetext p a:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+.dondetext p strong{
+    color: rgb(119, 54, 110);
+    text-transform: uppercase;
+}
+
+form{
+    width: 400px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+input.text{
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    border: 1px solid ;
+}
+
+button.enviar{
+    align-items:center;
+    height: 40px;
+    width: 140px;
+    text-align: center;
+    font-size: 18px;
+    color: aliceblue;
+    background-color: blueviolet;
+    border-radius: 12px;
+}
+
+input.radio{
+    width: 30px;
+    margin: auto;
+    margin-top: 10px;
+    
+}
+
+button.enviar:hover{
+    align-items:center;
+    cursor: pointer;
+    transform:scale(1.2) ;
+    transition: ease 0.5s;
+
+}
+
+.asistencia-text p{
+    margin: 25px 0;
+    text-align: justify;
+    padding: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.asistencia-text ol{
+    text-decoration: underline;
+}
+
+.asistencia-text li{
+    text-decoration: dotted;
+}
+
+.mail-owners-main a{
+    display:inline-block;
+    text-decoration: none;
+    width: 105px;
+    height: 35px;
+    color: black;
+    margin-right: 10px;
+    transition: all 300ms ease;
+}
+
+.mail-develop-main a{
+    display:inline-block;
+    text-decoration: none;
+    width: 105px;
+    height: 35px;
+    color: black;
+    margin-right: 10px;
+    transition: all 300ms ease;
+}
+
+.mail-develop-main p{
+    margin: 25px 0;
+    padding: 0;
+}
+
+/*Galería*/
+
+
+
+.container-slider{
+    width: 80%;
+    min-width: 500px; /*Con esto ya no estira*/
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden ; /*Para que solo se vea una imagen */
+    box-shadow: 0 0 0 5px rgb(red, green, rgba(236, 197, 223, 0.7)),/*Borde de color*/ 
+                0 150px 150px black;/*Sombra*/
+    position: relative;               
+}
+
+.slider{
+    display: flex;
+    width: 1300%; /*Si metes el flex se ponen una al lado de la otra, y hay que poner el % con el n de imagenes*/
+    height: 400px;
+    margin-left: -100%; /*Esto sirve para que empiece por la uno*/
+}
+
+.slider__section{
+    width:100% ;
+}
+
+.slider_img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.slider_btn{
+    position:absolute ;
+    width: 40px;
+    height: 40px;
+    background: rgba(228, 222, 222, 0.7);
+    top: 50%;
+    transform:translateY(-50%) ; /*Con esto se centran los botones de manera vertical*/
+    font-size:30px ;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.slider_btn:hover{
+    background-color: white;
+}
+
+.slider_btn-left{
+    left: 10px;
+
+}
+
+.slider_btn-right{
+    right: 10px; /*Para separar los botones*/
+}
+
+
+/*Cosas del aside*/
+
+.sideimage{
+    grid-area: sideimage;
+
+}
+
+aside img{
+    padding-top:90px ;
+    width: 800px;
+    position: sticky;
+    top: 0;
+    padding-left: 50px;
+}
+
+aside iframe{
+   
+    width: 900px;
+    height: 450px;
+    position: relative;
+    padding-left: 0px;
+    margin-top: 100px;
+}
+
+/*Cosas del footer*/
+
+footer{
+    grid-area: footer;
+    width: 100%;
+    background-color: #ffd6bb ;
+
+}
+
+.finalinfo .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+
+}
+
+.finalinfo .grupo-1 .box #logo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-family: "Bellarina";
+    font-size: 50px;
+    color: white;
+    font-weight: 1000;
+    padding-top: 40px;
+}
+
+.finalinfo .grupo-1 .box h2{
+    color:white;
+    margin-bottom:25px ;
+    font-size: 20px;
+}
+
+.finalinfo .grupo-1 .box p{
+    color: black;
+    margin-bottom: 10px;
+}
+
+.finalinfo .grupo-1 .mail-owners a{
+    display:inline-block;
+    text-decoration: none;
+    width: 105px;
+    height: 35px;
+    color: black;
+    margin-right: 10px;
+    transition: all 300ms ease;
+}
+
+.finalinfo .grupo-1 .mail-owners a:hover{
+    cursor: pointer;
+    color: aqua;
+}
+
+.finalinfo .grupo-1 .box h3{
+    color: white;
+    margin-bottom:25px ;
+    font-size: 20px;
+}
+
+.finalinfo .grupo-1 .mail-develop a{
+    display:inline-block;
+    text-decoration: none;
+    width: 105px;
+    height: 35px;
+    color: black;
+    margin-right: 10px;
+    transition: all 300ms ease;
+}
+
+.finalinfo .grupo-1 .mail-develop a:hover{
+    cursor: pointer;
+    color: aqua;
+
+}
+
+.finalinfo .grupo-2{
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+
+@media(max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+
+    nav ul li a{
+
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 858px){
+
+    .checkbtn{
+        display: block;
+
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#ffd6bb;
+        top:80px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 5;
+        border-top: 4px solid black;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+        color: black;
+    }
+
+    li a:hover,li a.active{
+        background: none;
+        color:red;
+    }
+    #check:checked ~ ul {
+        left:0;
+    }
+
+    .grid-container{
+        display: grid;
+        gap: 10px; /*Separación*/
+        grid-template: 
+        "header" auto
+        "sideimage" auto
+        "main" auto
+        "footer" auto /
+        600px;
+    }
+
+    .logo{
+        font-size: 30px;
+        padding-top: 20px;
+
+    }
+
+    aside img{
+        width: 540px;
+    }
+
+    aside iframe{
+   
+        width: 540px;
+        padding-left: 40px;
+    }
+
+    .finalinfo .grupo-1{
+        width: 100%;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+
+    .finalinfo .grupo-1 .box #logo{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        font-family: "Bellarina";
+        font-size: 30px;
+        color: white;
+        font-weight: 1000;
+        padding-top: 100px;
+    }
+}
